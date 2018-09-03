@@ -8,4 +8,16 @@
     <string name="password">Password</string>
     <string name="register">Register</string>
     <string name="this_is_a_one_time_process_only">*This is a one-time process only!</string>
+    <string name="congratulations">Congratulations!</string>
+    <string name="please_add_an_image_of_yourself_for_you_friends_to_see">Please add an image of yourself for others to see!</string>
+    <string name="nah_later">Nah, Later!</string>
+    <string name="ready_to_rock">Ready to rock!</string>
+    <string name="you_have_been_registered">You have been registered!</string>
+    <string name="registering_to_database_please_wait">Registering to database. Please wait...</string>
+    <string name="thank_you">Thank You!</string>
+    <string name="the_app_is_still_under_production">The app is still under production.</string>
+    <string name="feel_free_to_use_this_trial_app_as_much_as_you_want">Feel free to use this trial app as much as you want.</string>
+    <string name="a_lot_of_nifty_animations_and_features_are_added_to_keep_you_busy_for_a_few_minutes_good_luck">A lot of nifty animations and features are added to keep you busy for a few minutes. Good luck!</string>
+    <string name="exit">Exit</string>
+    <string name="syncing_db">Syncing to database. Please wait...</string>
 </resources>

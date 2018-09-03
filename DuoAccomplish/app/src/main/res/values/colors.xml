@@ -9,4 +9,5 @@
   <color name="primaryTextColor">#000000</color>
   <color name="secondaryTextColor">#ffffff</color>
   <color name="errorColor">#b71c1c</color>
+  <color name="happyGreenColor">#00b248</color>
 </resources>

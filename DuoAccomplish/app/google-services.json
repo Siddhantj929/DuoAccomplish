@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1768533992",
+    "firebase_url": "https://duoaccomplish.firebaseio.com",
+    "project_id": "duoaccomplish",
+    "storage_bucket": "duoaccomplish.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1768533992:android:60207aba5c28095e",
+        "android_client_info": {
+          "package_name": "com.example.siddh.duoaccomplish"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1768533992-kjd4i5011kanuou9ub2bkkh5nccpmkbn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.siddh.duoaccomplish",
+            "certificate_hash": "1a463b5361474f67f5dcaefccf5cb277f8eacac7"
+          }
+        },
+        {
+          "client_id": "1768533992-pq33p32dj90d0rs3vja7i1ivcrlaoo77.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOaE5OYCIl1_xyR0gItOavJMYcX2njShE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1768533992-pq33p32dj90d0rs3vja7i1ivcrlaoo77.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
