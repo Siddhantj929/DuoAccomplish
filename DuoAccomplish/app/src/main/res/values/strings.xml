@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">DuoAccomplish</string>
+    <string name="welcome_screen">welcome_screen</string>
+    <string name="welcome">Welcome!</string>
+    <string name="please_register_yourself">Please register yourself!</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="register">Register</string>
+    <string name="this_is_a_one_time_process_only">*This is a one-time process only!</string>
 </resources>
