@@ -1,11 +1,18 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.MaterialComponents.Light">
+        
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/primaryColor</item>
         <item name="colorPrimaryDark">@color/primaryDarkColor</item>
         <item name="colorAccent">@color/secondaryColor</item>
+
+        <item name="android:windowActivityTransitions"
+            tools:targetApi="21">true</item>
+
+        <!--<item name="drawerArrowStyle">@style/DrawerIconStyle</item>-->
+
     </style>
 
     <!-- No action bar -->
@@ -14,8 +21,38 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <!-- Error Text -->
     <style name="AppTheme.ErrorText" parent="@android:style/TextAppearance">
         <item name="android:textColor">@color/errorColor</item>
+    </style>
+
+    <!-- Splash screen -->
+    <style name="AppTheme.NoActionBar.Splash">
+        <item name="android:background">@color/primaryColor</item>
+    </style>
+
+    <!-- Collapsing toolbar title -->
+    <style name="AppTheme.ToolbarTitleExpanded">
+        <item name="android:textColor">@color/primaryColor</item>
+        <item name="android:fontFamily">casual</item>
+        <item name="android:textSize">28sp</item>
+    </style>
+
+    <style name="AppTheme.ToolbarTitleCollapsed">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:fontFamily">casual</item>
+    </style>
+
+    <!-- Navigation toggle -->
+    <style name="DrawerIconStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@color/secondaryColor</item>
+    </style>
+
+    <style name="AppTheme.ShadowText">
+        <item name="android:shadowColor">@android:color/black</item>
+        <item name="android:shadowRadius">0.7</item>
+        <item name="android:shadowDy">2</item>
+        <item name="android:shadowDx">3</item>
     </style>
 
 </resources>

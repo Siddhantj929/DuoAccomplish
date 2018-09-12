@@ -50,6 +50,7 @@ public class RegisterFragment extends Fragment
     @Override
     public void onUserRegistered() {
         Log.i("Debug", "onUserRegistered: Reached to Callbacks!");
+        User.get().login();
         mCallbacks.switchToActivity(UserImageActivity.class);
     }
 
@@ -65,9 +66,6 @@ public class RegisterFragment extends Fragment
 
         mDBHandler = new DBHandler();
         mDBHandler.setUserRegisteredListener(this);
-
-        User.get().setContext(getActivity());
-        mDBHandler.setContext(getActivity());
     }
 
     @Nullable

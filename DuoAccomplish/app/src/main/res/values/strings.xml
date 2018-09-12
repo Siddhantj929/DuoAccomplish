@@ -20,4 +20,19 @@
     <string name="a_lot_of_nifty_animations_and_features_are_added_to_keep_you_busy_for_a_few_minutes_good_luck">A lot of nifty animations and features are added to keep you busy for a few minutes. Good luck!</string>
     <string name="exit">Exit</string>
     <string name="syncing_db">Syncing to database. Please wait...</string>
+    <string name="nothing">Nothing</string>
+    <string name="search">Search</string>
+    <string name="posts_0">Posts: 0</string>
+    <string name="friends_0">Friends: 0</string>
+    <string name="you">You</string>
+    <string name="them">Them</string>
+    <string name="friends">Friends</string>
+    <string name="profile">Profile</string>
+    <string name="your_profile">Your Profile</string>
+    <string name="tasks">Tasks</string>
+    <string name="effeciency_analysis">Effeciency Analysis</string>
+    <string name="general">General</string>
+    <string name="settings">Settings</string>
+    <string name="logout">Logout</string>
+    <string name="social">Social</string>
 </resources>

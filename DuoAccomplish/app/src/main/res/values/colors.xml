@@ -4,10 +4,13 @@
   <color name="primaryLightColor">#ffffff</color>
   <color name="primaryDarkColor">#cccccc</color>
   <color name="secondaryColor">#7c4dff</color>
-  <color name="secondaryLightColor">#b47cff</color>
+  <color name="secondaryLightColor">#ede7f6</color>
   <color name="secondaryDarkColor">#3f1dcb</color>
   <color name="primaryTextColor">#000000</color>
   <color name="secondaryTextColor">#ffffff</color>
   <color name="errorColor">#b71c1c</color>
   <color name="happyGreenColor">#00b248</color>
+  <color name="shadowColor">#969696</color>
+  <color name="transparentColor">@android:color/transparent</color>
+  <color name="statusBarDarkColor">#1E133D</color>
 </resources>

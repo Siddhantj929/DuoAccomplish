@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="@string/social">
+
+        <menu>
+
+            <item
+                android:title="@string/friends"
+                android:icon="@drawable/ic_them"
+                android:checkable="true"/>
+
+        </menu>
+
+    </item>
+
+    <item
+        android:title="@string/your_profile">
+
+        <menu>
+
+            <item
+                android:title="@string/tasks"
+                android:icon="@drawable/ic_task"
+                android:checkable="true"/>
+
+            <item
+                android:title="@string/effeciency_analysis"
+                android:icon="@drawable/ic_analysis"
+                android:checkable="true"/>
+
+        </menu>
+
+    </item>
+
+    <item
+        android:title="@string/general">
+
+        <menu>
+
+            <item
+                android:checkable="true"
+                android:title="@string/settings"
+                android:icon="@drawable/ic_settings" />
+
+            <item
+                android:checkable="true"
+                android:id="@+id/logout_nav"
+                android:title="@string/logout"
+                android:icon="@drawable/ic_logout" />
+
+        </menu>
+
+    </item>
+
+</menu>

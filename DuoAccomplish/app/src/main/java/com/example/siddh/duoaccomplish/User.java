@@ -1,6 +1,8 @@
 package com.example.siddh.duoaccomplish;
 
 import android.content.Context;
+import android.content.SharedPreferences;
+import android.util.Log;
 
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -19,12 +21,16 @@ public class User {
     private static final String PASSWORD = "Password";
     private static final String ID = "Id";
     private static final String DBNAME = "Users";
+    private static final String PREFFERANCE_NAME = "localDB";
+    private static final String IS_LOGGED_IN = "isLoggedIn";
 
     private static User mInstance;
 
     private String mName;
     private String mEmail;
     private String mPassword;
+
+    private boolean mHasLoggedIn;
 
     private Context mContext;
 
@@ -37,7 +43,7 @@ public class User {
     private List<UUID> friends = new ArrayList<>();
 
     private User() {
-        mId = UUID.randomUUID();
+
         db = FirebaseFirestore.getInstance();
         userData = db.collection(DBNAME);
     }
@@ -56,7 +62,7 @@ public class User {
     }
 
     public String getPhotoFilename() {
-        return "IMG_" + mId.toString() + ".jpg";
+        return "IMG_" + mName + "_" + mId.toString() + ".jpg";
     }
 
     public File getPhotoFile() {
@@ -101,6 +107,61 @@ public class User {
             friends.add(friendId);
             return 0;
         }
+    }
+
+    public void login() {
+        SharedPreferences.Editor localDB = mContext
+                .getSharedPreferences(PREFFERANCE_NAME, Context.MODE_PRIVATE)
+                .edit();
+
+        localDB.putBoolean(IS_LOGGED_IN, true);
+        localDB.putString(NAME, mName);
+        localDB.putString(EMAIL, mEmail);
+        localDB.putString(PASSWORD, mPassword);
+        localDB.putString(ID, mId.toString());
+
+        localDB.apply();
+
+        Log.i("Debug", "login: User logged in!");
+    }
+
+    public void logout() {
+        SharedPreferences.Editor localDB = mContext
+                .getSharedPreferences(PREFFERANCE_NAME, Context.MODE_PRIVATE)
+                .edit();
+
+        localDB.clear();
+
+        localDB.apply();
+
+        Log.i("Debug", "logout: User logged out!");
+    }
+
+    public void setUpUser() {
+        SharedPreferences localDB = mContext
+                .getSharedPreferences(PREFFERANCE_NAME, Context.MODE_PRIVATE);
+
+        mName = localDB.getString(NAME, "Siddhant Jain");
+        mEmail = localDB.getString(EMAIL, "emailID@hostname.com");
+        mPassword = localDB.getString(PASSWORD, "Anything");
+        mHasLoggedIn = localDB.getBoolean(IS_LOGGED_IN, false);
+
+        String tempId = localDB.getString(ID, null);
+
+        if (tempId != null) {
+            mId = UUID.fromString(tempId);
+
+        } else {
+            mId = UUID.randomUUID();
+        }
+    }
+
+    public boolean hasLoggedIn() {
+        return mHasLoggedIn;
+    }
+
+    public void setLoggedIn(boolean hasLoggedIn) {
+        mHasLoggedIn = hasLoggedIn;
     }
 
     public List<UUID> getFriends() {

@@ -37,6 +37,7 @@ public class DBHandler {
     private static final String PASSWORD = "Password";
     private static final String ID = "Id";
     private static final String DBNAME = "Users";
+    private static final String USER_DOCUMENT_REFF = User.get().getName() + "_" + User.get().getId().toString();
 
     public DBHandler() {
         db = FirebaseFirestore.getInstance();
@@ -89,13 +90,14 @@ public class DBHandler {
             user.put(PASSWORD, User.get().getPassword());
             user.put(ID, User.get().getId().toString());
 
-            userData.document(User.get().getId().toString())
+            userData.document(USER_DOCUMENT_REFF)
                     .set(user)
                     .addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void aVoid) {
                             // Succesful
                             Log.i("Debug", "onSuccess: Success in registration");
+                            User.get().setLoggedIn(true);
                         }
                     })
                     .addOnFailureListener(new OnFailureListener() {
